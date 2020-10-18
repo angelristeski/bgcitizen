@@ -1,5 +1,5 @@
-import QtQuick 2.0
-import QtQuick.Controls 1.4
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 
 Item {
 
@@ -15,9 +15,9 @@ Item {
         fillMode: Image.PreserveAspectFit
     }
 
-    ExclusiveGroup { id: personGroup }
+    ButtonGroup { id: personGroup }
     RadioButton{
-        exclusiveGroup: personGroup
+        ButtonGroup.group:  personGroup
         anchors.top: headerImage.bottom
         anchors.left: parent.left
         anchors.topMargin: parent.height*0.02
@@ -33,7 +33,7 @@ Item {
     }
 
     RadioButton{
-        exclusiveGroup: personGroup
+        ButtonGroup.group: personGroup
         anchors.top: headerImage.bottom
         anchors.right: parent.right
         anchors.topMargin: parent.height*0.02
