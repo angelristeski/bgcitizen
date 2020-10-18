@@ -1,5 +1,5 @@
-import QtQuick 2.7
-import QtQuick.Window 2.2
+import QtQuick 2.15
+import QtQuick.Window 2.15
 
 Window {
     id: rootWindow
@@ -11,7 +11,7 @@ Window {
     Connections{
         target: networkManager
 
-        onCheckResult:{
+        function onCheckResult(result) {
             var resultJSON = JSON.parse(result);
 
             mainWindow.waitCursorController.visible = false;
