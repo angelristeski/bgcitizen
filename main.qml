@@ -11,7 +11,7 @@ Window {
     Connections{
         target: networkManager
 
-        onCheckResult:{
+        function onCheckResult(result) {
             var resultJSON = JSON.parse(result);
 
             mainWindow.waitCursorController.visible = false;
